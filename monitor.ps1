@@ -8,7 +8,7 @@ $remote_ip = "8.8.8.8"
 
 
 Write-Host "Pinging local IP $local_ip and DNS IP $remote_ip every $interval_sec seconds."
-Write-Host "$(Get-Date -Format 'HH:mm:ss')." -NoNewline
+Write-Host "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')." -NoNewline
 
 $count = 0
 while ($true) {
@@ -32,7 +32,7 @@ while ($true) {
 
     # Print the time every minute
     if ($count -ge 60 / $interval_sec) {
-        Write-Host "`n$(Get-Date -Format 'HH:mm:ss')" -NoNewline
+        Write-Host "`n$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -NoNewline
         $count = 0
         # [console]::beep(500, 250)  
     }
